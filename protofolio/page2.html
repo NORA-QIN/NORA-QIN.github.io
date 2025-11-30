@@ -7,7 +7,8 @@
   <style>
     :root{
       --gap:16px;
-      --img-width:80vw; /* 图片占页面宽度的 80% */
+      --img-width:80vw; 
+      padding: 20px;/* 图片占页面宽度的 80% */
     }
     body{
       font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -33,15 +34,24 @@
   <div class="list-wrap">
     <div class="list" id="imageList"></div>
   </div>
-  <div class="controls"><button id="addImg">追加一张图片</button></div>
+
 
   <script>
     // 图片按顺序展示，可替换为你的图片数组
     const imgs = [
-  "pic/page1.png",
+  
+  "https://raw.githubusercontent.com/NORA-QIN/NORA-QIN.github.io/main/pic/13.png",
+  "https://raw.githubusercontent.com/NORA-QIN/NORA-QIN.github.io/main/pic/14.png",
+  "https://raw.githubusercontent.com/NORA-QIN/NORA-QIN.github.io/main/pic/15.png",
+  "https://raw.githubusercontent.com/NORA-QIN/NORA-QIN.github.io/main/pic/16.png",
+  "https://raw.githubusercontent.com/NORA-QIN/NORA-QIN.github.io/main/pic/17.5.png",
+  "https://raw.githubusercontent.com/NORA-QIN/NORA-QIN.github.io/main/pic/17.6.png",
+  "https://raw.githubusercontent.com/NORA-QIN/NORA-QIN.github.io/main/pic/17.7.png",
+  "https://raw.githubusercontent.com/NORA-QIN/NORA-QIN.github.io/main/pic/17.png",
+  "https://raw.githubusercontent.com/NORA-QIN/NORA-QIN.github.io/main/pic/18.png",
+  "https://raw.githubusercontent.com/NORA-QIN/NORA-QIN.github.io/main/pic/21.png",
 
 ];
-
 
     const list = document.getElementById('imageList');
 
@@ -53,14 +63,6 @@
       list.appendChild(img);
     });
 
-    // 追加图片（继续排在末尾）
-    document.getElementById('addImg').addEventListener('click',()=>{
-      const n = Math.floor(Math.random()*10000);
-      const img = document.createElement('img');
-      img.loading = 'lazy';
-      img.src = `https://picsum.photos/seed/${n}/800/${400+Math.round(Math.random()*600)}`;
-      list.appendChild(img);
-    });
   </script>
 </body>
 </html>
